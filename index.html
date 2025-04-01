@@ -1,13 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xplore - Explore The World!</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
+
 <body>
 
-    <h1>Coming soon!</h1>
-    
+    <header id="header">
+        <div class="container">
+            <a href="index.html">
+                <img class="header-logo" src="images/logo.png" />
+            </a>
+
+            <nav>
+                <a href="pages/destinations.html">Destinations</a>
+                <a href="pages/plan.html">Plan a Trip</a>
+                <a href="pages/contacts.html">Contacts</a>
+            </nav>
+
+            <div class="search-bar">
+                <input onkeydown="pressEnterIndex(event)" id="search" type="text" placeholder="Search for a trip...">
+                <label onclick="searchIndex()" for="search" id="search-label"> <i class="fa-solid fa-magnifying-glass search-icon"></i> </label>
+            </div>
+
+            <i onclick="mobileMenu()" id="hamburger" class="fa-solid fa-bars"></i>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+                <div class="row">
+                    <div data-aos="fade-zoom-in" data-aos-delay="300" class="col-60">
+                        <p class="hero-tag">Xplore the world</p>
+                        <h1 class="hero-title">Journeys that change your life!</h1>
+                        <p>
+                            Our mission at Xplore is to turn every journey
+                            into a memorable experience. We are dedicated
+                            to discovering the most beautiful destinations,
+                            offering personalized itineraries, travel tips,
+                            and inspiration for modern adventurers.
+                        </p>
+                        <a href="pages/contacts.html" class="btn">Plan a Trip <i
+                                class="fa-solid fa-plane-departure"></i>
+                        </a>
+                        <a href="pages/contacts.html" class="btn">Contact Us <i
+                                class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="col-40">
+                        <img data-aos="fade-zoom-in" class="hero-img" src="images/tourist.png" />
+                    </div>
+                </div>
+
+                <div class="hero-cards">
+                    <div data-aos="fade-up" data-aos-delay="500" class="hero-card">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <h2>Lot of Choices</h2>
+                        <p>More than 200 destinations around the world</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="500" class="hero-card">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <h2>Best Tour Guide</h2>
+                        <p>Our tour guide with 15+ years of experience</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="700" class="hero-card">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h2>Easy Booking</h2>
+                        <p>With an easy and fast ticket purchase process.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="900" class="hero-card">
+                        <i class="fa-solid fa-award"></i>
+                        <h2>Best Reviews</h2>
+                        <p>We have the best reviews in the last 15 years</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+
+            <div class="container">
+                <h3 class="sub-title centered">Top Destinations</h3>
+                <h1 class="section-title centered">Explore Top Destinations</h1>
+
+
+                <div class="destinations" data-aos="fade-zoom-in">
+                    <div class="destination">
+                        <a href="">
+                            <img class="destination-img" src="./images/vienna.webp" />
+                            <h1>Enjoy the beauty of Vienna</h1>
+                        </a>
+                        <h3 class="sub-title">Vienna,Austria</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> 4.8
+                        </div>
+                    </div>
+
+                    <div class="destination">
+                        <a href="">
+                            <img class="destination-img" src="./images/prague.jpg" />
+                            <h1>The heart of Czech Republic</h1>
+                        </a>
+                        <h3 class="sub-title">Prague,Czech Republic</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> 4.7
+                        </div>
+                    </div>
+
+                    <div class="destination">
+                        <a href="">
+                            <img class="destination-img" src="./images/kemer.jpg" />
+                            <h1>Take a break in nature</h1>
+                        </a>
+                        <h3 class="sub-title">Kemer,Turkey</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> 4.9
+                        </div>
+                    </div>
+
+                    <div class="destination">
+                        <a href="">
+                            <img class="destination-img" src="./images/greece.webp" />
+                            <h1>Visit the Famous Santorini</h1>
+                        </a>
+                        <h3 class="sub-title">Santorini,Greece</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> 4.7
+                        </div>
+                    </div>
+
+                    <div class="destination">
+                        <a href="">
+                            <img class="destination-img" src="./images/rome.webp" />
+                            <h1>See the history with your eyes</h1>
+                        </a>
+                        <h3 class="sub-title">Rome,Italy</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> 4.8
+                        </div>
+                    </div>
+
+
+                    <div class="destination">
+                        <a href="">
+                            <img class="destination-img" src="./images/bukovel.jpeg" />
+                            <h1>A breath of fresh air</h1>
+                        </a>
+                        <h3 class="sub-title">Bukovel,Ukraine</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> 4.9
+                        </div>
+                    </div>
+                </div>
+
+                <a class="btn view-destinations" href="pages/destinations.html">View all destinations</a>
+
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+
+                <div data-aos="fade-zoom-in" class="outro">
+
+                    <div class="outro-video">
+                        <video autoplay muted loop src="videos/travel.mp4"></video>
+                    </div>
+
+                    <div class="outro-text">
+                        <h1 class="section-title">Trust our experience</h1>
+                        <h1 class="section-title">And enjoy your trips</h1>
+                        
+                        <div class="outro-items">
+
+                            <div class="outro-item">
+                                <h2>15+</h2>
+                                <p>Years of experience</p>
+                            </div>
+
+                            <div class="outro-item">
+                                <h2>200+</h2>
+                                <p>Destinations</p>
+                            </div>
+
+                            <div class="outro-item">
+                                <h2>30.000</h2>
+                                <p>Happy customers</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <footer>
+        <div class="container">
+            <h3 class="centered">Explore</h3>
+            <p class="centered">Copyright 2025. Developed by Odrin Jentimir</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
